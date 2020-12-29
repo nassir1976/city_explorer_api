@@ -13,6 +13,7 @@ app.get('/',(request, response)=>{
 });
 app.get('/location', locationHandler);
 // app.get('/weather', weatherHandler);
+// app.use('*', errorHandler);
 
 function locationHandler(request, response){
   const geoData = require('./data/location.json');
@@ -37,6 +38,7 @@ function Location(city, geoData) {
 function Weather(weather){
   this.time = weather.valid_date;
   this.forecast =weather.weather.description;
+
 }
 app.get('/weather',(request, response)=>{
   let emptyArr = [];
@@ -50,9 +52,12 @@ app.get('/weather',(request, response)=>{
   response.send(emptyArr);
 
 });
-// function errorHandler(error, request, response){
-//   response.status(404).send(error);
-// }
+
+app.use('*', errorHandler);
+
+function errorHandler(request, response){
+  response.status(500).send('Sorry, something went wrong');
+}
 
 
 app.use('*', (request, response) => {
