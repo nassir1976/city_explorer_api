@@ -36,8 +36,11 @@ function Location(city, geoData) {
 
 
 function Weather(weather){
-  this.time = weather.valid_date;
-  this.forecast =weather.weather.description;
+  // this.time = weather.valid_date;
+  // this.forecast =weather.weather.description;
+  this.forecast = weather.weather.description;
+  let date = Date.parse(weather.datetime);
+  this.time = new Date(date).toDateString();
 
 }
 app.get('/weather',(request, response)=>{
