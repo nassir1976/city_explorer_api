@@ -1,7 +1,6 @@
 # city_explorer_api.
 # lab-06-Backend
 
-Project Name
 # city_explorer_api.
 Author: Nassir Abegaz Version: 
 Overview
@@ -29,5 +28,3 @@ Finish time: _____
 
 Actual time needed to complete: 5 HOURS___
 
-Credits and Collaborations
-TO print out the validate date  Nicholas Ryan(TA'S)
