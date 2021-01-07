@@ -52,8 +52,8 @@ function weatherHandler(request, response) {
 
     response.send(weatherData);
 
-  });
-  // .catch(error => console.log(error));
+  }).catch(error => console.log(error));
+
 
 }
 
