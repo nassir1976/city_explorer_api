@@ -1,30 +1,49 @@
 # city_explorer_api.
 # lab-06-Backend
 
+# Project Name
 # city_explorer_api.
-Author: Nassir Abegaz Version: 
-Overview
-what this application is and why you are building it, beyond the fact that it's an assignment for this class.
+Author: Nassir Abegaz 
 
+## Overview
 This application about providing information(data) for the client when its requested(search) and the data a the first time will go to place contain the data by using json file .
+## Getting Started
+future one
+TO creatining repo .
+Estimate of time needed to complete: 1HOURS_
 
-Getting Started
-creating Repo creating server.js find .
+Start time: 8:30pm ____
 
-Architecture
-to built this apps i used
+Finish time: 9:30_____
 
-dotenv 
-express
- cors  
-Change Log
-Number and name of feature: 2_ location and weather API
+Actual time needed to complete: 1hr
 
-Estimate of time needed to complete: 4HOURS_
+feature two
+ retrive location DATA FROM Json file 
+Estimate of time needed to complete: 2HOURS_
 
-Start time: _8PM ____
+Start time: 10:00am
 
-Finish time: _____
+Finish time: 12:00pm _____
 
-Actual time needed to complete: 5 HOURS___
+Actual time needed to complete: 2hr
 
+feature three
+ retrive weather DATA FROM Json file 
+Estimate of time needed to complete: 2HOURS_
+
+Start time: 3pm
+
+Finish time: 6:10pm
+
+Actual time needed to complete:3:10hrs
+
+## Architecture
+install dependencies(cors, express,dotenv).
+install npm init .
+## Change Log
+12-28-2020 10:20pm - Application now has a fully-functional express server, with a GET route for the location and weather information works .
+
+## Credits and Collaborations
+
+  Nicholas Ryan(TA'S)
