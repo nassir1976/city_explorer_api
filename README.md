@@ -7,6 +7,7 @@
 # Author: Nassir Abegaz
 Overview This application about providing information(data) for the client when its requested(search) and the data a the first time will go to place contain the data by using json file
 
+This application about providing information(data) for the client when its requested(search) and the data a the first time will go to place contain the data by using json file
 
 Getting Started Number and name of feature: Repo Setup Estimate of time needed to complete: 1HOURS_
 
