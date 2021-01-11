@@ -60,6 +60,7 @@ Number and name of feature: data-formatting
 - superagent
 - locationiq to get API
 - weatherbit  to get API
+
 Estimate of time needed to complete: 1:30 min.
 
 Start time: 5:30pm 
