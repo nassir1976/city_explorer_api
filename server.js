@@ -28,11 +28,12 @@ app.get('/location', locationHandler);
 app.get('/weather', weatherHandler);
 
 
+
 function locationHandler(request, response) {
   // console.log('1', request.query.city);
   client.query('SELECT * FROM firstTable WHERE search_query =$1;', [request.query.city]).then(data => {
     if (data.rows.length > 0) {
-      console.log( 'info. from database');
+      console.log('info. from database');
       console.log(data.rows);
       response.send(data.rows[0]);
     } else {
@@ -103,22 +104,11 @@ function Weather(weather) {
 }
 
 
+
 function errorHandler(request, response) {
   response.status(500).send('Sorry, something went wrong');
 }
 app.use('*', errorHandler);
-
-// // app.listen(PORT, () => console.log(`app is listining ${PORT}`));
-
-// app.use('*', (request, response) => {
-//   response.status(500).send('Sorry, something went wrong');
-// });
-
-// // two paramater listing port and ()callback function
-
-
-
-
 
 
 client.connect().then(() => {
