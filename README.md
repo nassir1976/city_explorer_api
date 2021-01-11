@@ -95,7 +95,7 @@ GEOCODE_API_KEY=pk.436b00e27289c302066606840ecd3bbd EATHER_API_KEY=7cba562bf7074
 ## Overview
 
 
-- This application about providing information(data) for the client when its requested(search) and the data a the first time will go to place from our DATABASE if not find on the DATABASE give information  by using API key then saving to our DATABASE. .
+- This application about providing information(data) for the client when its requested  and when  first check the DATABASE and then  the search data if not find on the DATABASE the requested  information provided  by using API key then saving to our DATABASE. .
 ## Getting Started
 Lab 8
 Number and name of feature: #1 Database
