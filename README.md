@@ -6,10 +6,9 @@
 Author: Nassir Abegaz 
 
 ## Overview
-This application about providing information(data) for the client when its requested(search) and the data a the first time will go to place contain the data by using json file .
+This application about providing information(data) for the client when its requested(search) and the data a the first time will go to place contain the data by using json file 
 ## Getting Started
-future one
-TO creatining repo .
+Number and name of feature: Repo Setup
 Estimate of time needed to complete: 1HOURS_
 
 Start time: 8:30pm ____
@@ -18,8 +17,8 @@ Finish time: 9:30_____
 
 Actual time needed to complete: 1hr
 
-feature two
- retrive location DATA FROM Json file 
+Number and name of feature: Locations
+retrive location DATA FROM Json file 
 Estimate of time needed to complete: 2HOURS_
 
 Start time: 10:00am
@@ -28,8 +27,8 @@ Finish time: 12:00pm _____
 
 Actual time needed to complete: 2hr
 
-feature three
- retrive weather DATA FROM Json file 
+Number and name of feature: Weather
+retrive weather DATA FROM Json file 
 Estimate of time needed to complete: 2HOURS_
 
 Start time: 3pm
@@ -47,3 +46,4 @@ install npm init .
 ## Credits and Collaborations
 
   Nicholas Ryan(TA'S)
+  
