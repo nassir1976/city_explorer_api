@@ -1,12 +1,15 @@
 # city_explorer_api.
 
+
 # lab-06-Backend
 # Project Name
 # city_explorer_api.
 # Author: Nassir Abegaz
 Overview This application about providing information(data) for the client when its requested(search) and the data a the first time will go to place contain the data by using json file
 
+
 Getting Started Number and name of feature: Repo Setup Estimate of time needed to complete: 1HOURS_
+
 
 Start time: 8:30pm ____
 
@@ -118,16 +121,3 @@ Finish time: 6:30 pm
 
 Actual time needed to complete: 3 hrs
 
-
-
-## Credits and Collaborations
-
-TO print out the validate date and weather URL Nicholas Ryan(TA'S) 
-SQL get help by chance (TA)
-
-
-
-
-
-GEOCODE_API_KEY=pk.436b00e27289c302066606840ecd3bbd
-WEATHER_API_KEY=7cba562bf707483cb7dc64e1fdad65a1
