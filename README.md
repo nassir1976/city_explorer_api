@@ -1,92 +1,49 @@
 # city_explorer_api.
 # lab-06-Backend
 
-
- # Project Name 
- # city_explorer_api.
-
-**Author**: Nassir Abegaz
-**Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
+# Project Name
+# city_explorer_api.
+Author: Nassir Abegaz 
 
 ## Overview
- what this application is and why you are building it, beyond the fact that it's an assignment for this class. 
-
- This application about providing information(data) for the client when its requested(search) and the data a the first time will go to place contain the data by using API key then saving to our DATABASE. .
+This application about providing information(data) for the client when its requested(search) and the data a the first time will go to place contain the data by using json file 
 ## Getting Started
+Number and name of feature: Repo Setup
+Estimate of time needed to complete: 1HOURS_
 
-Number and name of feature: Repository setup
+Start time: 8:30pm ____
 
-Estimate of time needed to complete: 40  minutes
+Finish time: 9:30_____
 
-Start time: 8:30pm
+Actual time needed to complete: 1hr
 
-Finish time: 9:00pm
-
-Actual time needed to complete: 30 minutes
-
-Number and name of feature: Heroku deployment
-
-Estimate of time needed to complete:
-
-Start time: 5:00 pm
-
-Finish time: 8:15 pm
-
-Actual time needed to complete: Overall it took me 5 hours 30 minutes
-
-Number and name of feature: APIs and 
-
-Estimate of time needed to complete: 2hrs
-
-Start time: 10:00AM
-
-Finish time: 11:30am
-
-Actual time needed to complete: 1:30 hrs
-
-Number and name of feature: Persistence with SQL
-
-Estimate of time needed to complete: 5hrs
+Number and name of feature: Locations
+retrive location DATA FROM Json file 
+Estimate of time needed to complete: 2HOURS_
 
 Start time: 10:00am
 
-Finish time: 12:00pm
-Actual time needed to complete: 2hrs
+Finish time: 12:00pm _____
 
-Actual time needed to complete: Left with heroku deployment
+Actual time needed to complete: 2hr
 
-Number and name of feature: Persistence with SQL
-heroku deployment
-Estimate of time needed to complete: 1hrs
+Number and name of feature: Weather
+retrive weather DATA FROM Json file 
+Estimate of time needed to complete: 2HOURS_
 
-Start time: 12:30pm
+Start time: 3pm
 
-Finish time: 1:30PM
+Finish time: 6:10pm
 
-Actual time needed to complete: 1hr 
-
-
+Actual time needed to complete:3:10hrs
 
 ## Architecture
-to built this apps i used 
-
-dotenv
-express
-cors
-superagent
-locationiq to get API
-weatherbit  to get API
-postgress SQL pakage.
-
+install dependencies(cors, express,dotenv).
+install npm init .
+## Change Log
+12-28-2020 10:20pm - Application now has a fully-functional express server, with a GET route for the location and weather information works .
 
 ## Credits and Collaborations
 
-TO print out the validate date and weather URL Nicholas Ryan(TA'S) 
-SQL get help by chance (TA)
-
-
-
-
-
-GEOCODE_API_KEY=pk.436b00e27289c302066606840ecd3bbd
-WEATHER_API_KEY=7cba562bf707483cb7dc64e1fdad65a1
+  Nicholas Ryan(TA'S)
+  
