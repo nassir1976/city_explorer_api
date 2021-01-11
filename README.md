@@ -53,13 +53,13 @@ This application about providing information(data) for the client when its reque
 ## Getting Started
 
 Number and name of feature: data-formatting
-find API keys for location & weather.
-dotenv
-express
-cors
-superagent
-locationiq to get API
-weatherbit  to get API
+- find API keys for location & weather.
+- dotenv
+- express
+- cors
+- superagent
+- locationiq to get API
+- weatherbit  to get API
 Estimate of time needed to complete: 1:30 min.
 
 Start time: 5:30pm 
