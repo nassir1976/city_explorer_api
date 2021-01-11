@@ -1,13 +1,16 @@
+# city_explorer_api.
+
 
 # lab-06-Backend
 # Project Name
 # city_explorer_api.
 # Author: Nassir Abegaz
-Overview 
+Overview This application about providing information(data) for the client when its requested(search) and the data a the first time will go to place contain the data by using json file
 
 This application about providing information(data) for the client when its requested(search) and the data a the first time will go to place contain the data by using json file
 
 Getting Started Number and name of feature: Repo Setup Estimate of time needed to complete: 1HOURS_
+
 
 Start time: 8:30pm ____
 
@@ -39,20 +42,21 @@ Credits and Collaborations
 
 # city_explorer_api.
 # lab-07-Backend
-Overview 
-
+Overview
 This application about providing information(data) for the client when its requested(search) and the data a the first time will go to place contain the data by using API key .
 
-Getting Started Number and name of feature: data-formatting
+Getting Started
+Number and name of feature: data-formatting
 
-find API keys for location & weather.
-dotenv
-express
-cors
-superagent
-locationiq to get API
-weatherbit to get API
-Estimate of time needed to complete: 1:30 min.
+- find API keys for location & weather.
+- dotenv
+- express
+- cors
+- superagent
+- locationiq to get API
+- weatherbit to get API
+- Estimate of time needed to complete: 1:30 min.
+
 Start time: 5:30pm
 
 Finish time: 6:45pm
@@ -79,22 +83,26 @@ Finish time: 11:45pm
 
 Actual time needed to complete: 1:55hrs
 
-### Credits and Collaborations 
+Credits and Collaborations
 TO print out the validate date and weather URL Nicholas Ryan(TA'S)
 
 GEOCODE_API_KEY=pk.436b00e27289c302066606840ecd3bbd EATHER_API_KEY=7cba562bf707483cb7dc64e1fdad65a1
 
 # lab-08-Backend
-# Project Name
-# city_explorer_api.
 
 
-Overview
-This application about providing information(data) for the client when its requested and when first check the DATABASE and then the search data if not find on the DATABASE the requested information provided by using API key then saving to our DATABASE. 
+ # Project Name 
+ # city_explorer_api.
 
-Getting Started
+**Author**: Nassir Abegaz 
 
-Lab 8 Number and name of feature: #1 Database
+## Overview
+
+
+- This application about providing information(data) for the client when its requested  and when  first check the DATABASE and then  the search data if not find on the DATABASE the requested  information provided  by using API key then saving to our DATABASE. .
+## Getting Started
+Lab 8
+Number and name of feature: #1 Database
 
 Estimate of time needed to complete: 30 min
 
@@ -102,9 +110,9 @@ Start time: 2:00 pm
 
 Finish time: 2:45 pm
 
-Actual time needed to complete: 45 min
+Actual time needed to complete: 45  min
 
-Number and name of feature: #2 Server , SQL , DATABASE table setup
+Number and name of feature: #2 Server , SQL , DATABASE table setup 
 
 Estimate of time needed to complete: 60 min
 
@@ -114,6 +122,3 @@ Finish time: 6:30 pm
 
 Actual time needed to complete: 3 hrs
 
-
-### Credits and Collaborations 
-chance (TA ) heroku set up .
