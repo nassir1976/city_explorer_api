@@ -111,6 +111,7 @@ function yelpHandler(request, response) {
   const page = request.query.page || 1;
   const start = ((page - 1) * numPerPage + 1);
   const YELP_API_KEY = process.env.YELP_API_KEY;
+  console.log(YELP_API_KEY);
   const city = request.query.search_query;
 
   console.log(city);
@@ -121,8 +122,10 @@ function yelpHandler(request, response) {
     limit: numPerPage,
     offset: start
   };
-  superagent.get(url).set('Authorization', `Bearer ${YELP_API_KEY}`)
-  // limit the amount of resturant perpage
+
+  return superagent.get(url)
+    .set('Authorization', `Bearer ${YELP_API_KEY}`)
+    // limit the amount of resturant perpage
     .query(quaryparams)
 
     .then(getBusinessInfo => {
