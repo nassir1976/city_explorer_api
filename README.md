@@ -1,3 +1,4 @@
+
 ## city_explorer_api.
 ## lab-06-Backend
 ## Project Name
@@ -172,9 +173,5 @@ Actual time needed to complete: 1:23pm
 To fixed yelp API Authorization and validation error get help by Brai(TA).
 
  Pagination get help by Paul O'Brien(TA)
-
-
-
-
 
 

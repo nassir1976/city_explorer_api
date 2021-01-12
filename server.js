@@ -34,6 +34,7 @@ app.get('/movies', movieHandler);
 app.get('/yelp', yelpHandler);
 
 
+
 function locationHandler(request, response) {
   // console.log('1', request.query.city);
   client.query('SELECT * FROM firstTable WHERE search_query =$1;', [request.query.city]).then(data => {
@@ -170,6 +171,7 @@ function Yelp(yelpInfo) {
   this.rating = yelpInfo.rating;
   this.url = yelpInfo.url;
 }
+
 
 
 function errorHandler(request, response) {
