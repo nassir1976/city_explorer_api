@@ -155,9 +155,9 @@ Estimate of time needed to complete: 2 hr
 
 Start time: 11:30 am
 
-Finish time: --- 
+Finish time: 2:45pm
 
-Actual time needed to complete: --- 
+Actual time needed to complete: 3:15hrs
 
 Number and name of feature: #3 Pagination
 
