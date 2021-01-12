@@ -2,23 +2,27 @@
 
 //declare the application dependencies/ bring in my dependencies(modules)
 const express = require('express');
-require('dotenv').config();
 const cors = require('cors');
 const superagent = require('superagent');
 const pg = require('pg');
+require('dotenv').config();
 
 
 // start my application
 
 const app = express();
-// app.use(cors());
-const client = new pg.Client(process.env.DATABASE_URL);
 const PORT = process.env.PORT || 3002;
-client.on('error', error => console.error(error));
+
 // start database
+
+
 app.use(cors());
-
-
+const GEOCODE_API_KEY = process.env.GEOCODE_API_KEY;
+const WEATHER_API_KEY = process.env.WEATHER_API_KEY;
+const MOVIE_API_KEY = process.env.MOVIE_API_KEY;
+const YELP_API_KEY = process.env.YELP_API_KEY;
+const client = new pg.Client(process.env.DATABASE_URL);
+client.on('error', error => console.error(error));
 
 // Routes
 app.get('/', (request, response) => {
@@ -26,6 +30,8 @@ app.get('/', (request, response) => {
 });
 app.get('/location', locationHandler);
 app.get('/weather', weatherHandler);
+app.get('/movies', movieHandler);
+app.get('/yelp', yelpHandler);
 
 
 
@@ -38,9 +44,9 @@ function locationHandler(request, response) {
       response.send(data.rows[0]);
     } else {
       console.log('from internet');
-      const GEOCODE_API_KEY = process.env.GEOCODE_API_KEY;
+      // const GEOCODE_API_KEY = process.env.GEOCODE_API_KEY;
       // let city = request.query.city;
-      console.log(request.query.city);
+      // console.log(request.query.city);
       const url = `https://us1.locationiq.com/v1/search.php?key=${GEOCODE_API_KEY}&q=${request.query.city}&format=json`;
       //asnsicrness request
       superagent.get(url)
@@ -67,7 +73,7 @@ function locationHandler(request, response) {
 
 function weatherHandler(request, response) {
   // const city = request.query.search_query;
-  const WEATHER_API_KEY = process.env.WEATHER_API_KEY;
+  // const WEATHER_API_KEY = process.env.WEATHER_API_KEY;
   const longitude = request.query.longitude;
   const latitude = request.query.latitude;
   const url = `https://api.weatherbit.io/v2.0/forecast/daily?key=${WEATHER_API_KEY}&lat=${request.query.latitude}&lon=${request.query.longitude}&days=8`;
@@ -85,6 +91,49 @@ function weatherHandler(request, response) {
 
 
 }
+function movieHandler(request, response) {
+  // const MOVIE_API_KEY = process.env.MOVIE_API_KEY;
+  const city = request.query.search_query;
+  console.log(city);
+  const url = `https://api.themoviedb.org/3/search/movie?api_key=${MOVIE_API_KEY}&query=${request.query.search_query}`;
+  superagent.get(url).then(movieInfo => {
+    const movies = movieInfo.body;
+    console.log(movies);
+    const updatedMovieInfo = movies.results.map(movieInfo => new MovieDb(movieInfo));
+    response.send(updatedMovieInfo);
+  }).catch(error => console.log(error));
+
+}
+
+function yelpHandler(request, response) {
+  // limit the amount of resturant perpage
+  const numPerPage = 5;
+  const page = request.query.page || 1;
+  const start = ((page - 1) * numPerPage + 1);
+  // const YELP_API_KEY = process.env.YELP_API_KEY;
+  const city = request.query.search_query;
+
+  console.log(city);
+  const url = `http://api.yelp.com/v3/businesses/search?&location=${request.query.search_query}&term="resturant"`;
+
+  // limit the amount of resturant perpage
+  const quaryparams = {
+    limit: numPerPage,
+    offset: start
+  };
+  superagent.get(url).set('Authorization', `Bearer ${YELP_API_KEY}`)
+  // limit the amount of resturant perpage
+    .query(quaryparams)
+
+    .then(getBusinessInfo => {
+      const yelpInfo = getBusinessInfo.body.businesses;
+      console.log(yelpInfo);
+      const newInfo = yelpInfo.map(getBusinessInfo => new Yelp(getBusinessInfo));
+      response.send(newInfo);
+    }).catch(error => console.log(error));
+}
+
+
 
 // // constructor function
 
@@ -103,6 +152,26 @@ function Weather(weather) {
 
 }
 
+function MovieDb(movie) {
+  this.title = movie.orginal_title;
+  this.overview = movie.overview;
+  this.average_votes = movie.average_votes;
+  this.total_votes = movie.total_votes;
+  this.popularity = movie.popularity;
+  this.released_on = movie.released_on;
+  this.image_url = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+  // this.image_url = "https://image.tmdb.org/t/p/w500/afkYP15OeUOD0tFEmj6VvejuOcz.jpg";
+
+
+}
+function Yelp(yelpInfo) {
+  this.name = yelpInfo.name;
+  this.image_url = yelpInfo.image_url;
+  this.price = yelpInfo.price;
+  this.rating = yelpInfo.rating;
+  this.url = yelpInfo.url;
+}
+
 
 
 function errorHandler(request, response) {
@@ -115,4 +184,6 @@ client.connect().then(() => {
   app.listen(PORT, () => console.log(`now listening on port${PORT}`));
 
 
+
 }).catch(error => console.error(error));
+
