@@ -110,7 +110,7 @@ function yelpHandler(request, response) {
   const numPerPage = 5;
   const page = request.query.page || 1;
   const start = ((page - 1) * numPerPage + 1);
-  // const YELP_API_KEY = process.env.YELP_API_KEY;
+  const YELP_API_KEY = process.env.YELP_API_KEY;
   const city = request.query.search_query;
 
   console.log(city);
